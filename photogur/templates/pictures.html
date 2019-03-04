@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pictures</title>
+  </head>
+  <body>
+    <h1>Blog Pictures</h1>
+     {% for picture in pictures %}
+      <ul>
+        <li>
+          <p>{{ picture.title }} | {{ picture.artist }} </p>
+          <img src= "{{ picture.url }}" />
+        </li>
+      </ul>
+      {% endfor %}
+  </body>
+</html>
