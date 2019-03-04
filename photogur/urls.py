@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', root),
     path('pictures/', pictures),
-    path('pictures/<int:id>', picture_show),
+    path('pictures/<int:id>', picture_show, name='picture_show'),
 ]
