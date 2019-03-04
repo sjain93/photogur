@@ -7,6 +7,14 @@
   <body>
     <h1>{{picture.title}}</h1>
     <h2>By {{picture.artist}}</h2>
-    <img src="{{picture.url}}" alt="{{picture.title}}" />  
+    <img src="{{picture.url}}" alt="{{picture.title}}" />
+      {% for comment in pic_com %}
+        <ul>
+          <li>
+            <p>{{ comment.name }} | {{ comment.created_at }} </p>
+            <p>{{ comment.message }} </p>
+          </li>
+        </ul>
+      {% endfor %}
   </body>
 </html>
