@@ -6,13 +6,18 @@
     <title>Photogur</title>
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
   </head>
   <body>
     <header>
+      <hr />
       <h1>Photogur</h1>
+      <hr />
     </header>
-    {% block content %}
-    {% endblock %}
-    <footer> © Sanchit Jain </footer>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer> © 2019 Sanchit Jain </footer>
   </body>
 </html>
