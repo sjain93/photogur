@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>{{picture.title}}</h1>
-    <h2>By {{picture.artist}}</h2>
+    <h2>{{picture.title}}</h2>
+    <h3>By {{picture.artist}}</h3>
     <img src="{{picture.url}}" alt="{{picture.title}}" />
       {% for comment in pic_com %}
         <ul>
