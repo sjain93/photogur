@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Photogur</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
   <body>
     <header>
@@ -10,6 +13,6 @@
     </header>
     {% block content %}
     {% endblock %}
-    <footer> © Sanchit Jain</footer>
+    <footer> © Sanchit Jain </footer>
   </body>
 </html>
