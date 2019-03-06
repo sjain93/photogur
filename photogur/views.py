@@ -6,9 +6,6 @@ from photogur.models import Picture, Comment
 def root(request):
     return HttpResponseRedirect('pictures')
 
-# def home(request):
-#     return HttpResponseRedirect('pictures')
-
 def pictures(request):
     context = {'pictures': Picture.objects.all()}
     response = render(request, 'pictures.html', context)
@@ -23,7 +20,10 @@ def picture_show(request, id):
 
 def picture_search(request):
     query = request.GET['query']
-    search_results = Picture.objects.filter(artist=query)
+    search_results = Picture.objects.filter(artist__icontains=query) | Picture.objects.filter(title__icontains=query) | Picture.objects.filter(url__icontains=query)
     context = {'pictures': search_results, 'query':query}
     response = render(request, 'search_results.html', context)
     return HttpResponse(response)
+
+def create_comment(response):
+    pass

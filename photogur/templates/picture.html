@@ -11,4 +11,8 @@
           </li>
         </ul>
       {% endfor %}
+      <form class="comment_form" action="{% url 'create_comment'%}" method="post">
+        <input type="hidden" name="picture" value="{{ picture.pk }}">
+
+      </form>
 {% endblock %}
