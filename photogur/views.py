@@ -25,5 +25,9 @@ def picture_search(request):
     response = render(request, 'search_results.html', context)
     return HttpResponse(response)
 
-def create_comment(response):
-    pass
+def create_comment(request):
+    picture = Picture.objects.get(pk= request.POST['picture'])
+    comment = picture.comments.create(name=request.POST['name'],
+    message=request.POST['comment']
+    )
+    return HttpResponseRedirect('/pictures/{}'.format(picture.pk))

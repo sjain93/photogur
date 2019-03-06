@@ -12,7 +12,11 @@
         </ul>
       {% endfor %}
       <form class="comment_form" action="{% url 'create_comment'%}" method="post">
+        {% csrf_token %}
         <input type="hidden" name="picture" value="{{ picture.pk }}">
-
+        <label for="commenter">Name</label>
+        <input type="text" name="name" id="commenter">
+        <textarea name="comment">Add your comment here</textarea>
+        <input type="submit" name="submit" value="Send">
       </form>
 {% endblock %}
