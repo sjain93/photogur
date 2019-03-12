@@ -9,6 +9,9 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+nav {
+  padding: 0 1.1em;
+}
 .darker {
   margin: 0 auto;
   background-color: gray;
