@@ -23,6 +23,7 @@ from photogur.views import (
     create_comment,
     login_view,
     logout_view,
+    signup
 )
 
 
@@ -34,5 +35,6 @@ urlpatterns = [
     path("search", picture_search, name="picture_search"),
     path("comments/new", create_comment, name="create_comment"),
     path("login/", login_view, name="login"),
-    path("logout/", logout_view, name="logout")
+    path("logout/", logout_view, name="logout"),
+    path("signup/", signup, name="signup")
 ]
