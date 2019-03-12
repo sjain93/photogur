@@ -23,18 +23,20 @@ from photogur.views import (
     create_comment,
     login_view,
     logout_view,
-    signup
+    signup,
+    add_pic
 )
 
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", root),
-    path("pictures/", pictures),
+    path("pictures/", pictures, name="home"),
     path("pictures/<int:id>", picture_show, name="picture_show"),
     path("search", picture_search, name="picture_search"),
     path("comments/new", create_comment, name="create_comment"),
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
-    path("signup/", signup, name="signup")
+    path("signup/", signup, name="signup"),
+    path("newpicture/", add_pic, name="add_pic")
 ]

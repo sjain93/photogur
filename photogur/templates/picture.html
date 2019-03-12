@@ -2,6 +2,7 @@
 {% block content %}
     <h2>{{picture.title}}</h2>
     <h3>By {{picture.artist}}</h3>
+    <h3>Added by {{picture.user.username}}</h3>
     <img src="{{picture.url}}" alt="{{picture.title}}" />
       {% for comment in pic_com %}
         <ul>
