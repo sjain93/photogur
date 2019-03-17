@@ -55,6 +55,12 @@ a {
   color: gray;
 }
 
+.edit {
+  font-size: 0.8em;
+  text-decoration: underline;
+  font-style: italic;
+}
+
 footer {
   bottom: 0;
   left: 0;

@@ -3,6 +3,9 @@
     <h2>{{picture.title}}</h2>
     <h3>By {{picture.artist}}</h3>
     <h3>Added by {{picture.user.username}}</h3>
+    {% if request.user == picture.user %}
+      <p><a href="{% url 'edit_pic' id=picture.pk %}">Edit Picture</a></p>
+    {% endif %}
     <img src="{{picture.url}}" alt="{{picture.title}}" />
       {% for comment in pic_com %}
         <ul>

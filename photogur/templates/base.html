@@ -21,6 +21,7 @@
           <a href="{% url 'add_pic' %}">Add a Pic</a>
         {% else %}
           <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'signup'%}">Sign-Up</a>
         {% endif %}
         <form action="{% url 'picture_search' %}" method="get">
           <label for="picture-search">

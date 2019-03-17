@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#login page url default redirect
+LOGIN_URL = 'login'
 
 # Application definition
 

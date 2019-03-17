@@ -24,7 +24,8 @@ from photogur.views import (
     login_view,
     logout_view,
     signup,
-    add_pic
+    add_pic,
+    edit_pic,
 )
 
 
@@ -38,5 +39,6 @@ urlpatterns = [
     path("login/", login_view, name="login"),
     path("logout/", logout_view, name="logout"),
     path("signup/", signup, name="signup"),
-    path("newpicture/", add_pic, name="add_pic")
+    path("newpicture/", add_pic, name="add_pic"),
+    path("pictures/<int:id>/edit/", edit_pic, name="edit_pic")
 ]

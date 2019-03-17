@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Edit "<span class="edit">{{picture.title}}</span>"</h2>
+  <form action= "{% url 'edit_pic' id=picture.pk%}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="Submit">Edit!</button>
+  </form>
+{% endblock %}
